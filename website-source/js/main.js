@@ -97,8 +97,8 @@ require("./common.js");
         //api url
         var url = "https://api.giphy.com/v1/gifs/search?q=movies&limit=12&offset="+infiniteScroll.currentlyLoadedOffset+"&api_key=EaCnmIG6flyizJVvfsCPUP7525WowfZu";
         $.get(url,function(response){
+          if(response.meta.status==200){
           var completeImagePackage="";
-          console.log(response);
           response["data"].forEach(function(currentElement){
             var imagePreview = currentElement.images.fixed_width_small.url;
             var dataImage = currentElement.images.downsized_medium.url;
@@ -113,6 +113,7 @@ require("./common.js");
           $(".images-container").append(completeImagePackage);
           //loading complete
           isLoading = false;
+        }
         });
         infiniteScroll.next();
       }
