@@ -113,12 +113,19 @@
   font-family: 'Roboto',sans-serif;
   text-align: center;
 }
+.panel-content h1{
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 3vh;
+}
 .panel-content h2{
   padding: 0 10px;
   box-sizing: border-box;
+  font-size: 1.5vh;
 }
 .panel-content p{
   font-weight: 500;
+  font-size: 1.5vh;
   word-wrap: break-word;
 }
 
@@ -144,9 +151,6 @@
   }
 
   .content-container{
+  }
     font-size: 14px;
-  }
-  h1{
-    font-size: 1.5em;
-  }
 }

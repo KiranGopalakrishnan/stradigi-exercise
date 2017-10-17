@@ -43,7 +43,11 @@ require("./common.js");
       modalTitle:'',
     show:function(){
       modal.image=this.modalImage;
-      modal.title = this.modalTitle;
+      if(this.modalTitle.trim().length>0){
+        modal.title = this.modalTitle;
+      }else{
+        modal.title = "Image";
+      }
       modal.loadTitle();
       modal.loadImage();
       overlay.show();
